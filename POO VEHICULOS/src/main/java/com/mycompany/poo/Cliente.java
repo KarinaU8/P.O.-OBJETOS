@@ -4,25 +4,52 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente extends Persona {
+public class Cliente {
+    private String codigo;
+    private String nombres;
+    private String apellidos;
+    private String direccion;
+    private String sexo;
+    private String correo;
+    private String celular;
     private ArrayList<Vehiculo> vehiculos = new ArrayList<>();
     private static final String NOMBRE_ARCHIVO = "clientes.txt";
 
     public Cliente(String codigo, String nombres, String apellidos, String direccion, String sexo, String correo, String celular) {
-        super(codigo, nombres, apellidos);
+        this.codigo = codigo;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
         this.direccion = direccion;
         this.sexo = sexo;
         this.correo = correo;
         this.celular = celular;
     }
 
+    public String getCodigo() { return codigo; }
+    public void setCodigo(String codigo) { this.codigo = codigo; }
+    public String getNombres() { return nombres; }
+    public void setNombres(String nombres) { this.nombres = nombres; }
+    public String getApellidos() { return apellidos; }
+    public void setApellidos(String apellidos) { this.apellidos = apellidos; }
+    public String getDireccion() { return direccion; }
+    public void setDireccion(String direccion) { this.direccion = direccion; }
+    public String getSexo() { return sexo; }
+    public void setSexo(String sexo) { this.sexo = sexo; }
+    public String getCorreo() { return correo; }
+    public void setCorreo(String correo) { this.correo = correo; }
+    public String getCelular() { return celular; }
+    public void setCelular(String celular) { this.celular = celular; }
     public ArrayList<Vehiculo> getVehiculos() { return vehiculos; }
-
     public void addVehiculo(Vehiculo v) {
         if (v != null && !vehiculos.contains(v)) {
             vehiculos.add(v);
             v.setDueño(this);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente [" + "Código='" + codigo + '\'' + ", Nombres='" + nombres + '\'' + ", Apellidos='" + apellidos + '\'' + ", Dirección='" + direccion + '\'' + ", Sexo='" + sexo + '\'' + ", Correo='" + correo + '\'' + ", Celular='" + celular + '\'' + ']';
     }
 
     public String toCsvString() {
@@ -132,22 +159,5 @@ public class Cliente extends Persona {
             System.err.println("Error al leer el archivo de clientes: " + e.getMessage());
         }
         return clientes;
-    }
-
-    public static Cliente buscarClienteConVehiculos(String codigo, List<Vehiculo> todosLosVehiculos) {
-        Cliente cliente = buscarCliente(codigo);
-        if (cliente != null) {
-            for (Vehiculo vehiculo : todosLosVehiculos) {
-                if (vehiculo.getDueño() != null && vehiculo.getDueño().getCodigo().equals(codigo)) {
-                    cliente.addVehiculo(vehiculo);
-                }
-            }
-        }
-        return cliente;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString() + " | Vehículos: " + vehiculos.size();
     }
 }
