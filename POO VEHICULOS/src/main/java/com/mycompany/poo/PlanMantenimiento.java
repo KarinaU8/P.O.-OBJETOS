@@ -122,3 +122,5 @@ public class PlanMantenimiento {
         return "Plan de Mantenimiento [" + "Código='" + codigoMantenimiento + '\'' + ", Técnico='" + (tecnico != null ? tecnico.getNombres() : "N/A") + '\'' + ", Tipo='" + tipoMantenimiento + '\'' + ", Vehículo='" + (vehiculo != null ? vehiculo.getPlaca() : "N/A") + '\'' + ", Kilometraje=" + kilometraje + " km" + ", Falla='" + falla + '\'' + ", Fecha='" + fecha + '\'' + ", Costo=" + String.format("%.2f", costo) + " PEN" + ']';
     }
 }
+
+
