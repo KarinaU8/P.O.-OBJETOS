@@ -89,3 +89,4 @@ public class Usuario {
         return "Usuario [" + "Nombre de Usuario='" + nombreUsuario + '\'' + ", Contraseña='" + contrasena + '\'' + ']';
     }
 }
+
