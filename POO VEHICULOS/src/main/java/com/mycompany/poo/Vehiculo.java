@@ -15,7 +15,6 @@ public class Vehiculo {
         this.color = color;
     }
 
-    // Sobrecarga de constructor
     public Vehiculo(String placa, String marca) {
         this.codigo = "V-" + System.currentTimeMillis();
         this.placa = placa;
