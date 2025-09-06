@@ -1,0 +1,6 @@
+src/
+ ├── Persona.java
+ ├── Cliente.java
+ ├── Tecnico.java
+ ├── Vehiculo.java
+ └── Main.java
