@@ -1,40 +1,119 @@
-package transporte_sur;
-
-import final_grupo_02.clases.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+    private static ArrayList<Cliente> clientes = new ArrayList<>();
+    private static ArrayList<Tecnico> tecnicos = new ArrayList<>();
+    private static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("=== SISTEMA DE TRANSPORTE SUR ===");
-        
-        Cliente cliente1 = new Cliente("C001", "Juan", "Perez", "Av. Siempre Viva 123", "M", "juan@email.com", "999888777");
-        Cliente cliente2 = new Cliente("C002", "Maria", "Lopez", "Calle Los Olivos 456", "F", "maria@email.com", "988777666");
-        
-        Cliente.insertarCliente(cliente1);
-        Cliente.insertarCliente(cliente2);
-        
-        Vehiculo vehiculo1 = new Vehiculo("V001", "ABC-123", "1HGBH41JXMN109186", 2020, "Rojo", 4, 2.0, cliente1);
-        Vehiculo vehiculo2 = new Vehiculo("V002", "DEF-456", "5XYZH4AG0JH355774", 2018, "Azul", 4, 1.6, cliente1);
-        
-        Vehiculo.insertarVehiculo(vehiculo1);
-        Vehiculo.insertarVehiculo(vehiculo2);
-        
-        Tecnico tecnico1 = new Tecnico("T001", "Carlos", "Gomez", "Av. Tecnica 321", "M", "carlos@taller.com", "966555444", "Mecánico General", 5);
-        Tecnico.insertarTecnico(tecnico1);
-        
-        PlanMantenimiento plan1 = new PlanMantenimiento("M001", "Cambio de aceite", 15000, "Fuga de aceite", "2025-08-25", 120.50, tecnico1, vehiculo1);
-        PlanMantenimiento.insertarPlanMantenimiento(plan1);
-        
-        System.out.println("\n--- Datos insertados correctamente ---");
-        System.out.println("Clientes: " + Cliente.obtenerClientes().size());
-        System.out.println("Vehículos: " + Vehiculo.obtenerVehiculos(Cliente.obtenerClientes()).size());
-        System.out.println("Técnicos: " + Tecnico.obtenerTecnicos().size());
-        System.out.println("Planes de mantenimiento: " + PlanMantenimiento.obtenerPlanesMantenimiento(Tecnico.obtenerTecnicos(), Vehiculo.obtenerVehiculos(Cliente.obtenerClientes())).size());
-        
-        scanner.close();
+        Scanner sc = new Scanner(System.in);
+        inicializarDatos();
+        int opcion;
+
+        do {
+            System.out.println("\ MENÚ PRINCIPAL ");
+            System.out.println("1. Registrar Cliente");
+            System.out.println("2. Registrar Técnico");
+            System.out.println("3. Registrar Vehículo");
+            System.out.println("4. Mostrar Clientes");
+            System.out.println("5. Mostrar Técnicos");
+            System.out.println("6. Mostrar Vehículos");
+            System.out.println("0. Salir");
+            System.out.print("Seleccione una opción: ");
+            opcion = sc.nextInt();
+            sc.nextLine();
+
+            switch (opcion) {
+                case 1 -> {
+                    System.out.print("Codigo: ");
+                    String codigo = sc.nextLine();
+                    System.out.print("Nombres: ");
+                    String nombres = sc.nextLine();
+                    System.out.print("Apellidos: ");
+                    String apellidos = sc.nextLine();
+                    System.out.print("Dirección: ");
+                    String direccion = sc.nextLine();
+                    System.out.print("Sexo: ");
+                    String sexo = sc.nextLine();
+                    System.out.print("Correo: ");
+                    String correo = sc.nextLine();
+                    System.out.print("Celular: ");
+                    String celular = sc.nextLine();
+                    System.out.print("Tipo de Cliente: ");
+                    String tipo = sc.nextLine();
+                    clientes.add(new Cliente(codigo, nombres, apellidos, direccion, sexo, correo, celular, tipo));
+                    System.out.println("Cliente registrado.");
+                }
+                case 2 -> {
+                    System.out.print("Codigo: ");
+                    String codigo = sc.nextLine();
+                    System.out.print("Nombres: ");
+                    String nombres = sc.nextLine();
+                    System.out.print("Apellidos: ");
+                    String apellidos = sc.nextLine();
+                    System.out.print("Dirección: ");
+                    String direccion = sc.nextLine();
+                    System.out.print("Sexo: ");
+                    String sexo = sc.nextLine();
+                    System.out.print("Correo: ");
+                    String correo = sc.nextLine();
+                    System.out.print("Celular: ");
+                    String celular = sc.nextLine();
+                    System.out.print("Especialidad: ");
+                    String especialidad = sc.nextLine();
+                    System.out.print("Tiempo de servicio (años): ");
+                    int tiempo = sc.nextInt(); sc.nextLine();
+                    tecnicos.add(new Tecnico(codigo, nombres, apellidos, direccion, sexo, correo, celular, especialidad, tiempo));
+                    System.out.println("Técnico registrado.");
+                }
+                case 3 -> {
+                    System.out.print("Codigo: ");
+                    String codigo = sc.nextLine();
+                    System.out.print("Placa: ");
+                    String placa = sc.nextLine();
+                    System.out.print("Marca: ");
+                    String marca = sc.nextLine();
+                    System.out.print("Modelo: ");
+                    String modelo = sc.nextLine();
+                    System.out.print("Año: ");
+                    int anio = sc.nextInt(); sc.nextLine();
+                    System.out.print("Color: ");
+                    String color = sc.nextLine();
+                    vehiculos.add(new Vehiculo(codigo, placa, marca, modelo, anio, color));
+                    System.out.println("Vehículo registrado.");
+                }
+                case 4 -> {
+                    System.out.println("\n LISTA DE CLIENTES ");
+                    clientes.forEach(System.out::println);
+                }
+                case 5 -> {
+                    System.out.println("\n LISTA DE TÉCNICOS ");
+                    tecnicos.forEach(System.out::println);
+                }
+                case 6 -> {
+                    System.out.println("\n LISTA DE VEHÍCULOS ");
+                    vehiculos.forEach(System.out::println);
+                }
+                case 0 -> System.out.println("Saliendo del sistema");
+                default -> System.out.println("Opción inválida.");
+            }
+        } while (opcion != 0);
+
+        sc.close();
+    }
+
+    private static void inicializarDatos() {
+        clientes.add(new Cliente("C01", "Juan", "Pérez", "Lima", "M", "juan@gmail.com", "987654321", "Particular"));
+        clientes.add(new Cliente("C02", "Ana", "Gómez", "Arequipa", "F", "ana@gmail.com", "987654322", "Empresa"));
+
+        tecnicos.add(new Tecnico("T01", "Luis", "Quispe", "Cusco", "M", "luis@correo.com", "987654323", "Mecánica", 5));
+        tecnicos.add(new Tecnico("T02", "María", "Flores", "Tacna", "F", "maria@correo.com", "987654324", "Electricidad", 3));
+
+        vehiculos.add(new Vehiculo("V01", "ABC-123", "Toyota", "Corolla", 2018, "Rojo"));
+        vehiculos.add(new Vehiculo("V02", "XYZ-987", "Hyundai", "Accent", 2020, "Negro"));
     }
 }
+
 
 
