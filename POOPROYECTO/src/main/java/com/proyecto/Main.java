@@ -2,11 +2,16 @@ package com.proyecto;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-     private static ArrayList<Cliente> clientes = new ArrayList<>();
+    private static ArrayList<Cliente> clientes = new ArrayList<>();
     private static ArrayList<Tecnico> tecnicos = new ArrayList<>();
     private static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
+
+    private static final String CLIENTES_FILE = "clientes.txt";
+    private static final String TECNICOS_FILE = "tecnicos.txt";
+    private static final String VEHICULOS_FILE = "vehiculos.txt";
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -27,78 +32,93 @@ public class Main {
             sc.nextLine();
 
             switch (opcion) {
-                case 1 -> {
+                case 1:
                     System.out.print("Codigo: ");
-                    String codigo = sc.nextLine();
+                    String codigoC = sc.nextLine();
                     System.out.print("Nombres: ");
-                    String nombres = sc.nextLine();
+                    String nombresC = sc.nextLine();
                     System.out.print("Apellidos: ");
-                    String apellidos = sc.nextLine();
+                    String apellidosC = sc.nextLine();
                     System.out.print("Direccion: ");
-                    String direccion = sc.nextLine();
+                    String direccionC = sc.nextLine();
                     System.out.print("Sexo: ");
-                    String sexo = sc.nextLine();
+                    String sexoC = sc.nextLine();
                     System.out.print("Correo: ");
-                    String correo = sc.nextLine();
+                    String correoC = sc.nextLine();
                     System.out.print("Celular: ");
-                    String celular = sc.nextLine();
+                    String celularC = sc.nextLine();
                     System.out.print("Tipo de Cliente: ");
-                    String tipo = sc.nextLine();
-                    clientes.add(new Cliente(codigo, nombres, apellidos, direccion, sexo, correo, celular, tipo));
+                    String tipoC = sc.nextLine();
+                    Cliente nuevoCliente = new Cliente(codigoC, nombresC, apellidosC, direccionC, sexoC, correoC, celularC, tipoC);
+                    clientes.add(nuevoCliente);
+                    guardarCliente(nuevoCliente);
                     System.out.println("Cliente registrado.");
-                }
-                case 2 -> {
+                    break;
+                case 2:
                     System.out.print("Codigo: ");
-                    String codigo = sc.nextLine();
+                    String codigoT = sc.nextLine();
                     System.out.print("Nombres: ");
-                    String nombres = sc.nextLine();
+                    String nombresT = sc.nextLine();
                     System.out.print("Apellidos: ");
-                    String apellidos = sc.nextLine();
+                    String apellidosT = sc.nextLine();
                     System.out.print("Direccion: ");
-                    String direccion = sc.nextLine();
+                    String direccionT = sc.nextLine();
                     System.out.print("Sexo: ");
-                    String sexo = sc.nextLine();
+                    String sexoT = sc.nextLine();
                     System.out.print("Correo: ");
-                    String correo = sc.nextLine();
+                    String correoT = sc.nextLine();
                     System.out.print("Celular: ");
-                    String celular = sc.nextLine();
+                    String celularT = sc.nextLine();
                     System.out.print("Especialidad: ");
-                    String especialidad = sc.nextLine();
-                    System.out.print("Tiempo de servicio (años): ");
-                    int tiempo = sc.nextInt(); sc.nextLine();
-                    tecnicos.add(new Tecnico(codigo, nombres, apellidos, direccion, sexo, correo, celular, especialidad, tiempo));
+                    String especialidadT = sc.nextLine();
+                    System.out.print("Tiempo de servicio (aÃ±os): ");
+                    int tiempoT = sc.nextInt(); sc.nextLine();
+                    Tecnico nuevoTecnico = new Tecnico(codigoT, nombresT, apellidosT, direccionT, sexoT, correoT, celularT, especialidadT, tiempoT);
+                    tecnicos.add(nuevoTecnico);
+                    guardarTecnico(nuevoTecnico);
                     System.out.println("Tecnico registrado.");
-                }
-                case 3 -> {
+                    break;
+                case 3:
                     System.out.print("Codigo: ");
-                    String codigo = sc.nextLine();
+                    String codigoV = sc.nextLine();
                     System.out.print("Placa: ");
-                    String placa = sc.nextLine();
+                    String placaV = sc.nextLine();
                     System.out.print("Marca: ");
-                    String marca = sc.nextLine();
+                    String marcaV = sc.nextLine();
                     System.out.print("Modelo: ");
-                    String modelo = sc.nextLine();
+                    String modeloV = sc.nextLine();
                     System.out.print("Anio: ");
-                    int anio = sc.nextInt(); sc.nextLine();
+                    int anioV = sc.nextInt(); sc.nextLine();
                     System.out.print("Color: ");
-                    String color = sc.nextLine();
-                    vehiculos.add(new Vehiculo(codigo, placa, marca, modelo, anio, color));
+                    String colorV = sc.nextLine();
+                    Vehiculo nuevoVehiculo = new Vehiculo(codigoV, placaV, marcaV, modeloV, anioV, colorV);
+                    vehiculos.add(nuevoVehiculo);
+                    guardarVehiculo(nuevoVehiculo);
                     System.out.println("Vehiculo registrado.");
-                }
-                case 4 -> {
+                    break;
+                case 4:
                     System.out.println("\n LISTA DE CLIENTES ");
-                    clientes.forEach(System.out::println);
-                }
-                case 5 -> {
+                    for (Cliente c : clientes) {
+                        System.out.println(c);
+                    }
+                    break;
+                case 5:
                     System.out.println("\n LISTA DE TECNICOS ");
-                    tecnicos.forEach(System.out::println);
-                }
-                case 6 -> {
+                    for (Tecnico t : tecnicos) {
+                        System.out.println(t);
+                    }
+                    break;
+                case 6:
                     System.out.println("\n LISTA DE VEHICULOS ");
-                    vehiculos.forEach(System.out::println);
-                }
-                case 0 -> System.out.println("Saliendo del sistema");
-                default -> System.out.println("Opción invalida.");
+                    for (Vehiculo v : vehiculos) {
+                        System.out.println(v);
+                    }
+                    break;
+                case 0:
+                    System.out.println("Saliendo del sistema");
+                    break;
+                default:
+                    System.out.println("Opcion invalida.");
             }
         } while (opcion != 0);
 
@@ -106,13 +126,82 @@ public class Main {
     }
 
     private static void inicializarDatos() {
-        clientes.add(new Cliente("C01", "Juan", "Pérez", "Lima", "M", "juan@gmail.com", "987654321", "Particular"));
-        clientes.add(new Cliente("C02", "Ana", "Gómez", "Arequipa", "F", "ana@gmail.com", "987654322", "Empresa"));
+        cargarClientes();
+        cargarTecnicos();
+        cargarVehiculos();
+    }
 
-        tecnicos.add(new Tecnico("T01", "Luis", "Quispe", "Cusco", "M", "luis@correo.com", "987654323", "Mecánica", 5));
-        tecnicos.add(new Tecnico("T02", "María", "Flores", "Tacna", "F", "maria@correo.com", "987654324", "Electricidad", 3));
+    private static void guardarCliente(Cliente c) {
+        try (FileWriter fw = new FileWriter(CLIENTES_FILE, true)) {
+            fw.write(c.getCodigo() + ";" + c.getNombres() + ";" + c.getApellidos() + ";" + c.getDireccion() + ";" +
+                     c.getSexo() + ";" + c.getCorreo() + ";" + c.getCelular() + ";" + c.getTipoCliente() + "\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-        vehiculos.add(new Vehiculo("V01", "ABC-123", "Toyota", "Corolla", 2018, "Rojo"));
-        vehiculos.add(new Vehiculo("V02", "XYZ-987", "Hyundai", "Accent", 2020, "Negro"));
+    private static void guardarTecnico(Tecnico t) {
+        try (FileWriter fw = new FileWriter(TECNICOS_FILE, true)) {
+            fw.write(t.getCodigo() + ";" + t.getNombres() + ";" + t.getApellidos() + ";" + t.getDireccion() + ";" +
+                     t.getSexo() + ";" + t.getCorreo() + ";" + t.getCelular() + ";" + t.getEspecialidad() + ";" + t.getTiempoServicio() + "\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void guardarVehiculo(Vehiculo v) {
+        try (FileWriter fw = new FileWriter(VEHICULOS_FILE, true)) {
+            fw.write(v.getCodigo() + ";" + v.getPlaca() + ";" + v.getMarca() + ";" + v.getModelo() + ";" + v.getAnio() + ";" + v.getColor() + "\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void cargarClientes() {
+        File file = new File(CLIENTES_FILE);
+        if (!file.exists()) return;
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] data = line.split(";");
+                if (data.length == 8) {
+                    clientes.add(new Cliente(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void cargarTecnicos() {
+        File file = new File(TECNICOS_FILE);
+        if (!file.exists()) return;
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] data = line.split(";");
+                if (data.length == 9) {
+                    tecnicos.add(new Tecnico(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], Integer.parseInt(data[8])));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void cargarVehiculos() {
+        File file = new File(VEHICULOS_FILE);
+        if (!file.exists()) return;
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] data = line.split(";");
+                if (data.length == 6) {
+                    vehiculos.add(new Vehiculo(data[0], data[1], data[2], data[3], Integer.parseInt(data[4]), data[5]));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
