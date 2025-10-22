@@ -1,0 +1,6 @@
+T001;Luis;Ramirez;Av. Tecnicos 101;M;luis.ramirez@empresa.com;934567890;Mecánica;5
+T002;Ana;Torres;Calle Taller 202;F;ana.torres@empresa.com;945678901;Electrónica;3
+T003;Pedro;Sanchez;Jr. Servicio 303;M;pedro.sanchez@empresa.com;956789012;Pintura;7
+T004;Miguel;Castro;Av. Industrial 505;M;miguel.castro@empresa.com;912233445;Frenos;4
+T005;Elena;Gutierrez;Calle Motor 606;F;elena.gtz@empresa.com;934556677;Transmisión;6
+T006;Raul;Diaz;Jr. Carroceria 707;M;raul.diaz@empresa.com;955667788;Suspensión;2

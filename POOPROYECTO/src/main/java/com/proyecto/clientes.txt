@@ -1,0 +1,6 @@
+C001;Juan;Perez;Av. Siempre Viva 123;M;juan.perez@gmail.com;987654321;Premium
+C002;Maria;Lopez;Calle Sol 456;F;maria.lopez@yahoo.com;912345678;Regular
+C003;Carlos;Gomez;Jr. Luna 789;M;carlos.gomez@hotmail.com;998877665;VIP
+C004;Rosa;Fernandez;Av. Los Olivos 321;F;rosa.fernandez@gmail.com;987111222;Premium
+C005;Jorge;Martinez;Calle Palma 654;M;jorge.mtz@hotmail.com;933444555;Regular
+C006;Lucia;Vargas;Jr. Rivera 852;F;lucia.vargas@yahoo.com;977666777;VIP

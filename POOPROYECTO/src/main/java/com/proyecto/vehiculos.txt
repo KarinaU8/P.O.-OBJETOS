@@ -1,0 +1,6 @@
+V001;ABC-123;Toyota;Corolla;2018;Rojo
+V002;XYZ-789;Hyundai;Tucson;2020;Negro
+V003;LMN-456;Chevrolet;Spark;2016;Blanco
+V004;QWE-321;Kia;Rio;2019;Plata
+V005;RTY-654;Nissan;Versa;2021;Azul
+V006;UIO-987;Ford;Focus;2017;Gris
