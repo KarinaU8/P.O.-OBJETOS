@@ -1,0 +1,26 @@
+C001;Juan;Perez;Av. Siempre Viva 123;M;juan.perez@gmail.com;987654321;Premium
+C002;Maria;Lopez;Calle Sol 456;F;maria.lopez@yahoo.com;912345678;Regular
+C003;Carlos;Gomez;Jr. Luna 789;M;carlos.gomez@hotmail.com;998877665;VIP
+C004;Rosa;Fernandez;Av. Los Olivos 321;F;rosa.fernandez@gmail.com;987111222;Premium
+C005;Jorge;Martinez;Calle Palma 654;M;jorge.mtz@hotmail.com;933444555;Regular
+C006;Lucia;Vargas;Jr. Rivera 852;F;lucia.vargas@yahoo.com;977666777;VIP
+C007;Ana;Guzman;Av. Arequipa 101;F;ana.guzman@gmail.com;911222333;Regular
+C008;Luis;Mendoza;Calle Peru 202;M;luis.mendoza@hotmail.com;922333444;Premium
+C009;Sofia;Castro;Jr. Lima 303;F;sofia.castro@yahoo.com;933444555;VIP
+C010;Diego;Rojas;Av. Pardo 404;M;diego.rojas@gmail.com;944555666;Regular
+C011;Valeria;Silva;Calle 2 de Mayo 505;F;valeria.silva@hotmail.com;955666777;Premium
+C012;Martin;Flores;Jr. Grau 606;M;martin.flores@yahoo.com;966777888;Regular
+C013;Camila;Torres;Av. Ejercito 707;F;camila.torres@gmail.com;977888999;VIP
+C014;Javier;Rios;Calle San Martin 808;M;javier.rios@hotmail.com;988999000;Premium
+C015;Daniela;Ortiz;Jr. Bolivar 909;F;daniela.ortiz@yahoo.com;999000111;Regular
+C016;Bruno;Diaz;Av. Salaverry 110;M;bruno.diaz@gmail.com;912121212;VIP
+C017;Gabriela;Paz;Calle Real 121;F;gabriela.paz@hotmail.com;923232323;Regular
+C018;Ricardo;Luna;Jr. Union 132;M;ricardo.luna@yahoo.com;934343434;Premium
+C019;Paula;Vera;Av. Benavides 143;F;paula.vera@gmail.com;945454545;Regular
+C020;Matias;Soto;Calle Bolognesi 154;M;matias.soto@hotmail.com;956565656;VIP
+C021;Luciana;Campos;Jr. Sucre 165;F;luciana.campos@yahoo.com;967676767;Premium
+C022;Sebastian;Paredes;Av. Angamos 176;M;sebastian.paredes@gmail.com;978787878;Regular
+C023;Isabella;Chavez;Calle Mercaderes 187;F;isabella.chavez@hotmail.com;989898989;VIP
+C024;Nicolas;Miranda;Jr. Cusco 198;M;nicolas.miranda@yahoo.com;998989898;Regular
+C025;Valentina;Reyes;Av. Larco 209;F;valentina.reyes@gmail.com;987878787;Premium
+C026;Mateo;Guerrero;Calle Santa Cruz 220;M;mateo.guerrero@hotmail.com;976767676;VIP

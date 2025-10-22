@@ -1,0 +1,26 @@
+V001;ABC-123;Toyota;Corolla;2018;Rojo
+V002;XYZ-789;Hyundai;Tucson;2020;Negro
+V003;LMN-456;Chevrolet;Spark;2016;Blanco
+V004;QWE-321;Kia;Rio;2019;Plata
+V005;RTY-654;Nissan;Versa;2021;Azul
+V006;UIO-987;Ford;Focus;2017;Gris
+V007;FGH-789;Volkswagen;Jetta;2019;Blanco
+V008;JKL-123;Mazda;CX-5;2022;Rojo
+V009;MNP-456;Subaru;Forester;2017;Azul
+V010;QRS-789;Honda;CR-V;2020;Plata
+V011;TUV-123;Audi;A3;2018;Negro
+V012;WXY-456;BMW;X1;2021;Gris
+V013;ZAB-789;Mercedes-Benz;Clase A;2019;Blanco
+V014;CDE-123;Suzuki;Swift;2022;Rojo
+V015;EFG-456;Mitsubishi;Mirage;2016;Plata
+V016;HIJ-789;Peugeot;208;2020;Azul
+V017;KLM-123;Renault;Kwid;2019;Naranja
+V018;NOP-456;Fiat;Mobi;2021;Blanco
+V019;PQR-789;Jeep;Renegade;2018;Gris
+V020;STU-123;Volvo;XC40;2022;Negro
+V021;VWX-456;Chery;Tiggo 2;2019;Rojo
+V022;YZA-789;JAC;S2;2021;Azul
+V023;BCD-123;MG;ZS;2020;Blanco
+V024;DEF-456;Changan;CS15;2018;Plata
+V025;GHI-789;BYD;F3;2017;Negro
+V026;IJK-123;Great Wall;M4;2019;Rojo
