@@ -22,3 +22,4 @@ public class RegistroMantenimiento {
         return String.format("[%s] %s -> %s", fecha, vehiculo, descripcion);
     }
 }
+
