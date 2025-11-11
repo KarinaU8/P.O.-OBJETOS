@@ -20,6 +20,7 @@ Clases del Proyecto
   Clase principal que contiene el menú interactivo.  
   Permite registrar y mostrar clientes, técnicos y vehículos en consola.  
 
+
  Funcionalidades
 - Registrar y mostrar clientes.  
 - Registrar y mostrar técnicos.  
