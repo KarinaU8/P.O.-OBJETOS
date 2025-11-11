@@ -4,6 +4,7 @@ Clases del Proyecto
   Clase base que representa a una persona con atributos como código, nombres, apellidos, dirección, sexo, correo y celular.  
   Es la clase padre de Cliente y Tecnico.
 
+
 - Cliente 
   Hereda de Persona y añade el atributo tipoCliente (ejemplo: Particular o Empresa).  
   Representa a los clientes registrados en el sistema.
