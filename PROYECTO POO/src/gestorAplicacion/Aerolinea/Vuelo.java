@@ -175,8 +175,8 @@ public class Vuelo implements Serializable {
  // Este método demuestra cómo recorrer un ArrayList de forma funcional usando
  //forEach() y una función anónima (lambda). Es equivalente a un for tradicional,
  //pero más compacto y moderno.
-public void mostrarAsientosLambda() {
-    System.out.println("Asientos disponibles (usando Lambda):");
+public void mostrarAsientos() {
+    System.out.println("Asientos disponibles :");
 
     // a → representa cada objeto Asiento dentro del ArrayList "asientos".
     // Este forEach recorre toda la lista sin necesidad de usar un for clásico.
