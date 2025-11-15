@@ -322,4 +322,33 @@ public class Boleto implements Serializable {
     public ArrayList<Animal> getMascotas() {
         return this.mascotas;
     }
+
+   // Muestra toda la información del boleto, incluyendo servicios y precio final.
+public void mostrarDetalle() {
+    System.out.println("----- Detalle del Boleto -----");
+
+    // Datos del pasajero
+    System.out.println("Pasajero: " + pasajero.getNombre());
+
+    // Trayecto
+    System.out.println("Origen - Destino: " + getOrigenDestino());
+
+    // Información del asiento
+    System.out.println("Asiento Nº " + asiento.getN_silla() + " | Tipo: " + tipo);
+
+    System.out.println("Servicios contratados:");
+
+    // Aquí se usa una expresión lambda para imprimir cada servicio.
+    // Se hace una pequeña transformación antes de mostrarlo
+    // para que el uso de lambda sea más evidente.
+    serviciosContratados.forEach(serv -> {
+        // Esto se ejecuta por cada servicio en la lista
+        String detalle = " - " + serv.toUpperCase();  // pequeña modificación al texto
+        System.out.println(detalle);
+    });
+
+    // Precio total del boleto
+    System.out.println("Precio total: $" + valor);
+}
+
 }
