@@ -43,3 +43,4 @@ public class upgradeAsiento extends Descuento implements Serializable {
         this.usar(); // Marca el descuento como usado
     }
 }
+
