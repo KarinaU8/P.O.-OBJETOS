@@ -202,4 +202,8 @@ public class Usuario implements Serializable {
 		this.contrasena = contrasena;
 	}
 
+// Constructor vacío (este lo necesita Java para poder reconstruir el objeto cuando se usa XMLDecoder).
+public Usuario() {
+}
+
 }
