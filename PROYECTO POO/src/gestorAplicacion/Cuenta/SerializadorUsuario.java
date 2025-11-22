@@ -5,9 +5,7 @@ import java.beans.XMLEncoder;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-// Esta clase la uso solo para guardar y cargar un Usuario en un archivo XML.
-// La idea es tener algo sencillo para demostrar la parte de "clases persistentes"
-// que vimos en el PPT, sin hacer un sistema de archivos muy complejo.
+// Esta clase la uso solo para guardar y cargar un Usuario en un archivo XML
 public class SerializadorUsuario {
 
     // Este método guarda un objeto Usuario en un archivo XML.
