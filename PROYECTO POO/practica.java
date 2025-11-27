@@ -14,3 +14,4 @@ public void mostrarBoletosOrdenadosPorPrecio() {
         System.out.println("Boleto: " + b.getCodigo() + " - Precio: $" + b.getValor())
     );
 }
+
